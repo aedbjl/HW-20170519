@@ -1,0 +1,64 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+
+<script>
+for (var j = 0; j < 3; j++) {
+    (function (l) {
+        setTimeout(function () {
+                {
+                    $.post("123.php", {id: l}, function (data, status) {
+                        $("#123").html(data);
+                    });
+                }
+            }
+            , 1000 + (1000 * l))
+    })(j);
+}
+//function test(l) {
+//    $.post("123.php", {id: l}, function (data, status) {
+//        $("#123").html(data);
+//    });
+//
+//}
+
+//    for (var i=0;i<=10;i++) {
+//        (function(l) {
+//            setTimeout(function(){console.log(l);}, 1000 + (3000 * l));
+//        })(i);
+//    }
+////
+
+
+
+//    function test() {
+//        $.post("123.php", {id: temp}, function (data, status) {
+//            $("#123").html(data);
+//        });
+//    }
+
+</script>
+<form>
+
+    <table width="100%" border="3px">
+        <tr>
+            <td id="123"></td>
+            <td></td>
+            <td>5</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>5</td>
+            <td>5</td>
+            <td>5</td>
+            <td>5</td>
+        </tr>
+    </table>
+</form>
+
+
+</body>
