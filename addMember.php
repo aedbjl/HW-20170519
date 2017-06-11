@@ -1,12 +1,18 @@
 <?php
+//include 'sqlC.php';
+//$pdo=@new pdo($dsn,$user,$password,$opt);
 if(isset($_GET['account'])){
     $account=$_GET['account'];
-    $password=$_GET['password'];
+    $passwd=password_hash($_GET['passwd'],PASSWORD_DEFAULT);
     $realname=$_GET['realname'];
-    $sql="insert into member(account,password,realname)"." values('{$account}','{$password}','{$realname}')";
-    $db=@ new mysqli('127.0.0.1','root','root','iii');
+//    $sql='insert into member(account,password,realname) values(?,?,?)';
+//    $pdo->prepare($sql)->execute([]);
+
+
+    $sql="insert into member(account,password,realname)"." values('{$account}','{$passwd}','{$realname}')";
+    $db=@ new mysqli('127.0.0.1','root','root','checkaccount');
     $db->query($sql);
-    header('Location:20170531 A&P.php');
+    header('Location:555.html');
 }
 ?>
 
@@ -19,7 +25,7 @@ if(isset($_GET['account'])){
         </tr>
         <tr>
             <th>password</th>
-            <td><input type="password" name="password"></td>
+            <td><input type="password" name="passwd"></td>
 
         </tr>
         <tr>

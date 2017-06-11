@@ -5,5 +5,5 @@ $user='root';
 $password='root';
 $driver='mysql';
 $charset='utf8';
-$dsn= "{$driver}:host={$host};dbname={$db};charset{$charset}";
+$dsn= "{$driver}:host={$host};dbname={$db};charset={$charset}";
 $opt=[PDO::ATTR_DEFAULT_FETCH_MODE=>PDO::FETCH_BOTH];

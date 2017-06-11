@@ -1,0 +1,62 @@
+
+
+<!DOCTYPE html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game</title>
+</head>
+<body>
+<!--<form>-->
+<!--<table>-->
+<!--<tr>-->
+    <!--<th>account:</th>-->
+    <!--<td><input type="text" name="account"/><br></td>-->
+<!--</tr>-->
+    <!--<tr>-->
+        <!--<th>password:</th>-->
+        <!--<td><input type="password" name="passwd"/><br></td>-->
+    <!--</tr>-->
+    <!--<tr>-->
+        <!--<th>realname:</th>-->
+        <!--<td><input type="text" name="realname"/><br></td>-->
+    <!--</tr>-->
+<!--<table>-->
+<!--</form>-->
+<form action="checkaccount.php" method="get">
+    <table>
+        <tr>
+            <th>account:</th>
+            <td><input type="text" name="account"/><br></td>
+        </tr>
+        <tr>
+            <th>password:</th>
+            <td><input type="password" name="passwd"/><br></td>
+        </tr>
+        <tr>
+            <th>realname:</th>
+            <td><input type="text" name="realname"/><br></td>
+        </tr>
+        <table>
+    <input type="submit" value="login"><br>
+
+<a href="addMember.php">addMember</a>
+<div id="here"></div>
+</form>
+
+
+<script>
+//    $("#click").click(function(){
+//        $.get("brad51.php", function(data, status){
+//            //$("#here").html(status);
+//            if (status == 'success'){
+//                $("#here").html(data);
+//            }
+//        });
+//    });
+</script>
+
+</body>
+</html>
