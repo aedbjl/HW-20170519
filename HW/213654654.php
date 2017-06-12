@@ -6,6 +6,9 @@
         background-size: cover;
         background-image: url('./img/chair.png')
     }
+    div{
+        font-family: sans-serif;
+    }
 </style>
 <script>
 

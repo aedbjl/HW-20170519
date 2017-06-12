@@ -30,7 +30,8 @@
     }
 
     table {
-        text-align:center
+        text-align:center;
+        fonz-family:sans-serif;
     }
     a.edit:link, a.edit:visited{
         background-color: blue;
