@@ -16,6 +16,19 @@
     a:hover, a:active {
         background-color: green;
     }
+
+    a.logout:link, a.logout:visited{
+        background-color: darkred;
+        color: white;
+        padding: 8px 12px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+    }
+    a.logout:hover, a.logout:active {
+        background-color: darkred;
+    }
+
     table {
         text-align:center
     }
@@ -30,7 +43,9 @@
     a.edit:hover, a.edit:active {
         background-color: blue;
     }
-
+    div.play {
+        font-size: x-large;
+    }
 
 </style>
 <?php
@@ -50,7 +65,7 @@ $stmt->execute();
 <table width="100%" border="2px">
     <tr>
 
-        <th>id</th>
+        <th>選手</th>
         <th>power</th>
         <th>contact</th>
         <th>speed</th>
@@ -73,6 +88,6 @@ $stmt->execute();
 
 
 <hr>
-<a href="logout.php">Logout</a><br>
+<div align="right"><a href="logout.php" class="logout">Logout</a><br></div>
 <hr>
-<a href="111.html" >play</a>
+<div align="center" class="play"><a href="111.html" >play</a><div>

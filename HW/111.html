@@ -65,7 +65,7 @@ for (var j = 1; j < 4; j++) {
     (function (l) {
         setTimeout(function () {
                 {
-                    $.post("123.php", {id: l}, function (data, status) {
+                    $.post("456.php", {id: l}, function (data, status) {
                         sum1 += Number(data);
                         $("#2").html(sum1);
                     });
@@ -122,7 +122,7 @@ for (var j = 1; j < 4; j++) {
     (function (l) {
         setTimeout(function () {
                 {
-                    $.post("123.php", {id: l}, function (data, status) {
+                    $.post("456.php", {id: l}, function (data, status) {
                         sum3 += Number(data);
                         $("#4").html(sum3);
                     });
@@ -178,7 +178,7 @@ for (var j = 1; j < 4; j++) {
     (function (l) {
         setTimeout(function () {
                 {
-                    $.post("123.php", {id: l}, function (data, status) {
+                    $.post("456.php", {id: l}, function (data, status) {
                         sum5 += Number(data);
                         $("#6").html(sum5);
                     });
@@ -230,17 +230,74 @@ $(document).ready(function () {
     },22000);
 });
 
+var sum7 = Number(0);
+for (var j = 0; j < 3; j++) {
+    (function (l) {
+        setTimeout(function () {
+                {
+                    $.post("123.php", {id: l}, function (data, status) {
+                        sum7 += Number(data);
+                        $("#8").html(sum7);
+                    });
+                }
+            }
+            , 22000 + (1000 * l))
+    })(j);
+}
+
 $(document).ready(function () {
     setTimeout(function(){
-        if ($('#9').text() >= $('#10').text()){
-            var sum7 = Number(0);
+        $('.list2').each(function(i) {
+            var list = 0;
+            $(this).parent().find('td:gt(3)')
+                .each(function(i)
+                {
+                    list += parseInt($(this).text());
+                });
+            $(this).text(list);
+        });
+    },25000);
+});
+
+var sum8 = Number(0);
+for (var j = 1; j < 4; j++) {
+    (function (l) {
+        setTimeout(function () {
+                {
+                    $.post("123.php", {id: l}, function (data, status) {
+                        sum8 += Number(data);
+                        $("#9").html(sum8);
+                    });
+                }
+            }
+            , 25000 + (1000 * l))
+    })(j);
+}
+$(document).ready(function () {
+    setTimeout(function(){
+        $('.list1').each(function(i) {
+            var list = 0;
+            $(this).parent().find('td:gt(4)')
+                .each(function(i)
+                {
+                    list += parseInt($(this).text());
+                });
+            $(this).text(list);
+        });
+    },28000);
+});
+
+$(document).ready(function () {
+    setTimeout(function(){
+        if ($('#11').text() >= $('#12').text()){
+            var sum9 = Number(0);
             for (var j = 0; j < 3; j++) {
                 (function (l) {
                     setTimeout(function () {
                             {
-                                $.post("123.php", {id: l}, function (data, status) {
-                                    sum7 += Number(data);
-                                    $("#8").html(sum7);
+                                $.post("456.php", {id: l}, function (data, status) {
+                                    sum9 += Number(data);
+                                    $("#10").html(sum9);
                                 });
                             }
                         }
@@ -252,7 +309,7 @@ $(document).ready(function () {
                 setTimeout(function(){
                     $('.list2').each(function(i) {
                         var list = 0;
-                        $(this).parent().find('td:gt(3)')
+                        $(this).parent().find('td:gt(4)')
                             .each(function(i)
                             {
                                 list += parseInt($(this).text());
@@ -261,41 +318,14 @@ $(document).ready(function () {
                     });
                 },2000);
             });
-        }else if($('#9').text() < $('#10').text()){
+        }else if($('#11').text() < $('#12').text()){
             var result = document.getElementById('result');
             result.innerHTML = "<b>YOU ARE A LOSER!!!!</b>"
         }
-    },22000);
+    },28000);
 });
 
-//var sum7 = Number(0);
-//for (var j = 0; j < 3; j++) {
-//    (function (l) {
-//        setTimeout(function () {
-//                {
-//                    $.post("123.php", {id: l}, function (data, status) {
-//                        sum7 += Number(data);
-//                        $("#8").html(sum7);
-//                    });
-//                }
-//            }
-//            , 22000 + (1000 * l))
-//    })(j);
-//}
 
-//$(document).ready(function () {
-//    setTimeout(function(){
-//        $('.list2').each(function(i) {
-//            var list = 0;
-//            $(this).parent().find('td:gt(3)')
-//                .each(function(i)
-//                {
-//                    list += parseInt($(this).text());
-//                });
-//            $(this).text(list);
-//        });
-//    },25000);
-//});
 
 //$(document).ready(function () {
 //    setTimeout(function(){
@@ -313,17 +343,17 @@ $(document).ready(function () {
 
 $(document).ready(function () {
     setTimeout(function(){
-        if ($('#9').text() > $('#10').text()){
+        if ($('#11').text() > $('#12').text()){
             var result = document.getElementById('result');
             result.innerHTML = "<b>YOU WIN</b>"
-        }else if ( $('#9').text() == $('#10').text()){
+        }else if ( $('#11').text() == $('#12').text()){
             var result = document.getElementById('result');
             result.innerHTML = "<b>TIE GAME</b>"
-        }else if($('#9').text() < $('#10').text()) {
+        }else if($('#11').text() < $('#12').text()) {
             var result = document.getElementById('result');
             result.innerHTML = "<b>YOU ARE A LOSER!!!!</b>"
         }
-    },25000);
+    },31000);
 });
 
 </script>
@@ -337,6 +367,7 @@ $(document).ready(function () {
             <td  >第二局</td>
             <td  >第三局</td>
             <td  >第四局</td>
+            <td  >第五局</td>
             <td  >總分</td>
         </tr>
 
@@ -347,7 +378,8 @@ $(document).ready(function () {
             <td  id="3">0</td>
             <td  id="5">0</td>
             <td  id="7">0</td>
-            <td class="list1" id="9">0</td>
+            <td  id="9">0</td>
+            <td class="list1" id="11">0</td>
         </tr>
         <tr>
             <td  >電腦</td>
@@ -355,7 +387,8 @@ $(document).ready(function () {
             <td id="4">0</td>
             <td id="6">0</td>
             <td id="8">0</td>
-            <td class="list2" id="10">0</td>
+            <td  id="10">0</td>
+            <td class="list2" id="12">0</td>
         </tr>
     </table>
 

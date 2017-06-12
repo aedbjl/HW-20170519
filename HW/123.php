@@ -8,6 +8,7 @@ $stmt->execute([$id]);
 $goal = 0;
 $obj = $stmt->fetchObject();
 $newresult = 0.5*("$obj->power")+0.3*("$obj->contact") + 0.2*("$obj->speed");
+
 $rs = rand(0, $newresult);
 if ($rs <= 0.5) {
     $goal = 1;
