@@ -34,7 +34,7 @@
             if (result != 'OK'){
                 document.getElementById('crs').innerHTML = '已存在';
             }else{
-                document.getElementById('crs').innerHTML = '很好';
+                document.getElementById('crs').innerHTML = '可使用';
             }
         }
     }

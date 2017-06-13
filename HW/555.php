@@ -3,26 +3,33 @@
         background-size: cover;
         background-image: url('./img/ed.jpg')
     }
-    a:link, a:visited {
-        background-color: green;
-        color: white;
+    a.play1:link, a.play1:visited {
+        background-color: whitesmoke;
+        border-radius: 10%;
+        border: 1px;
+        color: darkgreen;
         padding: 8px 12px;
         text-align: center;
+        font-family: sans-serif;
+        font-size: 36px;
         text-decoration: none;
         display: inline-block;
     }
 
 
-    a:hover, a:active {
+    a.play1:hover, a.play1:active {
         background-color: green;
+        color: white;
     }
 
     a.logout:link, a.logout:visited{
         background-color: darkred;
+        border-radius: 10%;
         color: white;
         padding: 8px 12px;
         text-align: center;
         text-decoration: none;
+        font-family: sans-serif;
         display: inline-block;
     }
     a.logout:hover, a.logout:active {
@@ -35,9 +42,12 @@
     }
     a.edit:link, a.edit:visited{
         background-color: blue;
+        border-radius: 10%;
         color: white;
         padding: 8px 12px;
         text-align: center;
+        font-family: sans-serif;
+
         text-decoration: none;
         display: inline-block;
     }
@@ -63,8 +73,8 @@ $stmt->execute();
 
 ?>
 <p align="center" style="font-size: x-large">Hello, <?php echo $memberObj->name; ?></p>
-<table width="100%" border="2px">
-    <tr>
+<table width="100%" border="2px" style="font-size: x-large;font-family: sans-serif">
+    <tr style="background-color:cornsilk">
 
         <th>選手</th>
         <th>power</th>
@@ -91,4 +101,4 @@ $stmt->execute();
 <hr>
 <div align="right"><a href="logout.php" class="logout">Logout</a><br></div>
 <hr>
-<div align="center" class="play"><a href="111.html" >play</a><div>
+<div align="center" class="play"><a href="111.html" class="play1" >play</a><div>

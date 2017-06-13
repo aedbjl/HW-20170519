@@ -1,6 +1,6 @@
 <?php
 $host='127.0.0.1';
-$db='iii';
+$db='061408';
 $user='root';
 $password='root';
 $driver='mysql';

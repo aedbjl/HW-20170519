@@ -29,13 +29,13 @@ if(!isset($_GET['editid'])) header('Location:555.php');
 $editid=$_GET['editid'];
 $_SESSION['id']=$editid;
 $sql="select * from member where id={$editid}";
-$db=@ new mysqli('127.0.0.1','root','root','iii');
+$db=@ new mysqli('127.0.0.1','root','root','061408');
 $rs=$db->query($sql);
 $editObj=$rs->fetch_object();
 ?>
 
-<header><b>數值說明:每個選項皆可隨機出不同的數值，數值越小，能力越好</b><br>
-        <b>每個選項所出現的數值為隨機，請多做好事</b>
+<header><b>數值說明:每個選項皆可隨機出不同的數值，數值越小，能力越好。</b><br>
+        <b>每個選項所出現的數值為隨機</b>
 </header>
 
 <form action="updateMember.php">

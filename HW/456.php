@@ -7,7 +7,7 @@ $stmt=$pdo->prepare($sql);
 $stmt->execute([$id]);
 $goal = 0;
 $obj = $stmt->fetchObject();
-$newresult = 0.3*("$obj->power")+0.4*("$obj->contact") + 0.5*("$obj->speed");
+$newresult = 0.2*("$obj->power")+0.3*("$obj->contact") + 0.5*("$obj->speed");
 
 $rs = rand(0, $newresult);
 if ($rs <= 0.5) {
