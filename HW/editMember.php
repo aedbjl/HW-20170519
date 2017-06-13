@@ -29,7 +29,7 @@ if(!isset($_GET['editid'])) header('Location:555.php');
 $editid=$_GET['editid'];
 $_SESSION['id']=$editid;
 $sql="select * from member where id={$editid}";
-$db=@ new mysqli('127.0.0.1','root','root','iii');
+$db=@ new mysqli('127.0.0.1','root','root','061408');
 $rs=$db->query($sql);
 $editObj=$rs->fetch_object();
 ?>
